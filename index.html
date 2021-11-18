@@ -1,0 +1,93 @@
+<html lang="pl">
+ <head>
+<title> Użycie fukcji </title> 
+ <meta charset="utf-8"> 
+<script type="text/javascript">
+function okno_zamknij_David() 
+ {
+ window.close()
+ }
+</script>
+ </head> 
+<body>
+ <div style="color:purple;font-size:30px;">
+ <script language="JavaScript">
+ var a=parseFloat(prompt("a=",""));
+ var b=parseFloat(prompt("b=",""));
+ function suma_dav(a, b) {
+ return a + b;
+ }
+ function odejmowanie_dav(a, b){
+ return a - b;
+ }
+ function mnozenie_dav(a, b){
+ return a * b;
+ }
+ function do_kwadratu_dav(a, b){
+ return (a+"^2="+(a * a)+'<br>'+b+"^2="+(b * b));
+ }
+ function reszta_dzielenia_dav(a, b){
+ return a % b;
+ }
+ document.write("suma="+suma_dav(a,b)+"<br>"+"mnożenie="+mnozenie_dav(a, b)+"<br>"+"do kwadratu:"+'<br>'+do_kwadratu_dav(a, b)+"<br>"+"reszta z dzielenia a przez b="+reszta_dzielenia_dav(a,b)+"<br>");
+ document.write('<br/><input type="button" value="zamknij okno" onclick="okno_zamknij_pedchenko()">');
+</script>
+</div>
+</body>
+</html><head> 
+<title>
+ Przykład obliczenia obwoda i pola prostokąta
+</title>
+ <script language="JavaScript">
+function obwod_David(a_ped, b_ped)
+{
+ a_ped_liczba=parseFloat(a_ped)
+ b_ped_liczba=parseFloat(b_ped)
+ obwod_dav_wynik=(a_ped_liczba+b_ped_liczba)*2
+ document.getElementsByName('obw')[0].value=obwod_dav_wynik.toFixed(2); 
+ alert("Obwod="+obwod_dav_wynik.toFixed(2)+" cm"); 
+ wyprowadz_obwod_ped.innerHTML="Obwod="+obwod_dav_wynik.toFixed(2)+" cm"+"<br>"; 
+}
+function Pole_dav(a_ped, b_ped)
+{
+ a_ped_liczba=parseFloat(a_ped)
+ b_ped_liczba=parseFloat(b_ped)
+ Pole_dav_wynik=a_ped_liczba*b_ped_liczba
+ document.getElementsByName('pole')[0].value=Pole_dav_wynik.toFixed(2);
+ alert("Pole="+Pole_dav_wynik.toFixed(2)+" cm^2");
+ wyprowadz_pole_ped.innerHTML="Pole="+Pole_dav_wynik.toFixed(2)+"cm^2";
+}
+function okno_zamknij_David() 
+{
+ window.close()
+}
+ </script>
+</head> 
+<body> 
+Pobliczanie obwoda i pola prostokata
+<br> <br>
+<form name="formularz" action="..." onsubmit="obwod_dav(this.a_dana_ped.value,this.b_dana_ped.value); 
+Pole_dav(this.a_dana_ped.value,this.b_dana_ped.value);return false"> 
+Podaj a=
+<input size="6" name="a_dana_dav">
+Podaj b=
+<input size="6" name="b_dana_dav">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Obwód=
+<input size="6" name="obw">
+Pole=
+<input size="6" name="pole">
+</form>
+<table>
+<tr id="wyprowadz_obwod_dav"></tr>
+<tr id="wyprowadz_pole_dav"></tr>
+</table>
+<form>
+ 	    <input type="button" value="zamknij okno" onclick="okno_zamknij_David()">
+</form>
+</body> 
+</html>
